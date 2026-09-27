@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: white;
+            color: #222;
+        }
+        
+        .top {
+            height: 60px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            gap: 25px;
+        }
+        
+        .menu {
+            font-size: 25px;
+        }
+        
+        .logo {
+            color: red;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .search {
+            width: 50%;
+            height: 38px;
+            border: 1px solid #ccc;
+            display: flex;
+            margin-left: 120px;
+        }
+
+        .search input {
+            width: 90%;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+        }
+        
+        .search button {
+            width: 10%;
+            border: none;
+            border-left: 1px solid #ccc;
+            background: #f8f8f8;
+        }
+        
+        .profile {
+            margin-left: auto;
+            background: purple;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 9px;
+        }
+        
+        .side {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 225px;
+            height: 100%;
+            border-right: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .side p {
+            padding: 13px 25px;
+            font-size: 15px;
+        }
+        
+        .side p:hover {
+            background: #eee;
+        }
+        
+        .main {
+            margin-left: 225px;
+            padding: 10px 38px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 12px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        
+        .buttons span {
+            background: #eee;
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .buttons span:first-child {
+            background: black;
+            color: white;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px 18px;
+            margin-top: 20px;
+            
+        }
+        
+        .video img {
+            width: 100%;
+            height: 145px;
+            object-fit: cover;
+        }
+        
+        .video h3 {
+            font-size: 14px;
+            margin-top: 9px;
+            line-height: 20px;
+        }
+        
+        .video p {
+            color: #666;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+        
+        .channel {
+            color: #555;
+        }
+        
+        @media(max-width: 900px) {
+            .videos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .side {
+                width: 80px;
+            }
+
+            .side p {
+                font-size: 11px;
+                padding: 15px 5px;
+            }
+            
+            .main {
+                margin-left: 80px;
+            }
+            
+            .search {
+                margin-left: 20px;
+            }
+        }
+        .side {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 225px;
+    height: calc(100vh - 60px);
+    border-right: 1px solid #ddd;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="menu">☰</div>
+
+        <div class="logo">▶ YouTube</div>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+
+        <div>🎥</div>
+        <div>🔔</div>
+        <div class="profile">C</div>
+    </div>
+
+
+    <div class="side">
+        <p>🏠 Home</p>
+        <p>🧭 Explore</p>
+        <p>▣ Subscriptions</p>
+        <br>
+        <p>▣ Library</p>
+        <p>◷ History</p>
+        <p>▶ Your videos</p>
+        <p>◷ Watch later</p>
+        <p>👍 Liked videos</p>
+
+        <br>
+        <b style="padding-left:25px;">SUBSCRIPTIONS</b>
+
+        <p>🎵 Music</p>
+        <p>🏆 Sports</p>
+        <p>🎮 Gaming</p>
+        <p>📰 News</p>
+    </div>
+
+
+    <div class="main">
+
+        <div class="buttons">
+            <span>All</span>
+            <span>Music</span>
+            <span>Mixes</span>
+            <span>User interface design</span>
+            <span>Nollywood</span>
+            <span>Logos</span>
+            <span>Graphic design</span>
+            <span>Website</span>
+            <span>Computer Science</span>
+        </div>
+
+
+        <div class="videos">
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?1">
+                <h3>4-Year Medical Doctor (MD) Degree in UK</h3>
+                <p>Ready to start med school? AUC has a 92% first-time...</p>
+                <p class="channel">AUC School of Medicine</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?2">
+                <h3>UI Design Trends 2021</h3>
+                <p>521K views • 5 months ago</p>
+                <p class="channel">DesignSense</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?3">
+                <h3>Simi - Complete Me | Official Video</h3>
+                <p>3.7M views • 3 years ago</p>
+                <p class="channel">X3M Music</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?4">
+                <h3>Data Analyst Career Switch</h3>
+                <p>56K views • 1 month ago</p>
+                <p class="channel">The Work Life Man</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?5">
+                <h3>STUBBORN BILLIONAIRES Complete</h3>
+                <p>4.3M views • 2 years ago</p>
+                <p class="channel">UGezu News</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?6">
+                <h3>Linda Osifo and Olakira on The NdaniTGIFShow</h3>
+                <p>13K views • 1 year ago</p>
+                <p class="channel">Ndani TV</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?7">
+                <h3>Designing a Complete Brand Identity</h3>
+                <p>1.5M views • 2 years ago</p>
+                <p class="channel">Graphic Design</p>
+            </div>
+
+            <div class="video">
+                <img src="https://picsum.photos/400/220?8">
+                <h3>7 Mistakes Ladies Make When They Like a Guy</h3>
+                <p>17K views • 5 months ago</p>
+                <p class="channel">Kingsley Okonkwo</p>
+            </div>
+              <div class="video">
+                <img src="https://picsum.photos/400/220?8">
+                <h3>7 Mistakes Ladies Make When They Like a Guy</h3>
+                <p>17K views • 5 months ago</p>
+                <p class="channel">Kingsley Okonkwo</p>
+            </div>
+              <div class="video">
+                <img src="https://picsum.photos/400/220?8">
+                <h3>7 Mistakes Ladies Make When They Like a Guy</h3>
+                <p>17K views • 5 months ago</p>
+                <p class="channel">Kingsley Okonkwo</p>
+            </div>
+              <div class="video">
+                <img src="https://picsum.photos/400/220?8">
+                <h3>7 Mistakes Ladies Make When They Like a Guy</h3>
+                <p>17K views • 5 months ago</p>
+                <p class="channel">Kingsley Okonkwo</p>
+            </div>
+              <div class="video">
+                <img src="https://picsum.photos/400/220?8">
+                <h3>7 Mistakes Ladies Make When They Like a Guy</h3>
+                <p>17K views • 5 months ago</p>
+                <p class="channel">Kingsley Okonkwo</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
